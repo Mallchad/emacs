@@ -1364,8 +1364,7 @@ With arg, enter name of variable to be watched in the minibuffer."
 	  (save-selected-window
 	    (let ((expr
 		   (if arg
-		       (completing-read "Name of variable: "
-					'gud-gdb-complete-command)
+		       (read-string "Name of Variable: ")
 		     (if (and transient-mark-mode mark-active)
 			 (buffer-substring (region-beginning) (region-end))
 		       (concat (if (derived-mode-p 'gdb-registers-mode) "$")
