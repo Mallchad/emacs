@@ -1364,7 +1364,7 @@ With arg, enter name of variable to be watched in the minibuffer."
 	  (save-selected-window
 	    (let ((expr
 		   (if arg
-		       (read-string "Name of Variable: ")
+		       (read-string "Watch Expression: ")
 		     (if (and transient-mark-mode mark-active)
 			 (buffer-substring (region-beginning) (region-end))
 		       (concat (if (derived-mode-p 'gdb-registers-mode) "$")
